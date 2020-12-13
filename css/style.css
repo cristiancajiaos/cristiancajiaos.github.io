@@ -1,0 +1,109 @@
+body {
+    font-family: 'PT Sans Narrow', 'Arial', 'sans-serif';
+}
+
+.bar {
+    border-top: 2px solid white;
+    border-bottom: 0;
+    width: 40px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.main-container {
+    position: fixed;
+    animation: fadeIn 1.5s;
+    background-image: linear-gradient(to right bottom, white 35%, #6db6d9 95%), linear-gradient(to left bottom, white, blue);
+    height: 100vh;
+    width: 100vw;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.main-container header {
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    color: white; 
+    transition: width 0.1s linear; 
+    height: inherit;
+}
+
+@media screen and (max-width: 991px) {
+    .main-container header {
+        padding-top: 1rem;
+        width: 100%;
+        align-items: center;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .main-container header {
+        position: fixed;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.main-container header img.header-profile {
+    width: 150px;
+    height: 150px;
+    border: 1px solid white;
+    box-shadow: 3px 3px 10px black;
+}
+
+.main-container header h1.header-title {
+    text-transform: uppercase;
+}
+
+.main-container header .header-description {
+    text-align: center;
+}
+
+.main-container header a.portfolio-link {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background-color: #333;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: opacity 0.1s linear;
+    border: 1px solid white;
+    box-shadow: 3px 3px 10px black;
+}
+
+.main-container header a.portfolio-link:hover {
+    opacity: 0.5;
+}
+
+.main-container header .social-links {
+    margin-bottom: 1rem;
+}
+
+.main-container header .social-links a.social-link {
+    color: white; 
+    text-decoration: none;
+    transition: opacity 0.1s linear;
+}
+
+.main-container header .social-links a.social-link:hover {
+    opacity: 0.5;
+}
+
+.main-container header .stack-exchange {
+    width: 208px;
+    height: 58px;
+}
